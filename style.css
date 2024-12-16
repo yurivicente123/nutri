@@ -1,0 +1,343 @@
+/* Geral */
+body {
+  font-family: 'Roboto', sans-serif; /* Substituição da fonte */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-image: url('');
+  background-size: contain; /* Ajusta a imagem para que ela se ajuste ao tamanho da tela */
+  background-position: center; /* Garante que a imagem fique centralizada */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+}
+
+main {
+  padding-top: 70px; /* Espaço suficiente para evitar sobreposição */
+}
+
+header {
+  background-color: #f8f9fa;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #436850;
+  border-bottom: 2px solid #436850;
+  height: 60px;
+  position: fixed; /* Torna o header fixo */
+  z-index: 1000; /* Mantém o header acima de outros elementos */
+  width: 100%; /* Faz o header ocupar toda a largura */
+  top: 0; /* Posiciona no topo da página */
+}
+
+.logo {
+  width: 90px;
+  color: #fff;
+}
+
+.top-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Roboto', sans-serif; /* Fonte personalizada para os links */
+  font-weight: bold;
+  padding: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column; /* Ajusta o header em uma coluna */
+    height: auto; /* Altura dinâmica para cabeçalhos menores */
+    padding: 15px;
+  }
+
+  .top-bar ul {
+    flex-direction: column; /* Links dispostos verticalmente */
+    align-items: center; /* Centraliza os links */
+    gap: 10px; /* Espaçamento entre os links */
+  }
+
+  .top-bar a {
+    font-size: 1rem; /* Ajusta o tamanho do texto dos links */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 70px; /* Reduz tamanho da logo */
+  }
+
+  .top-bar {
+    padding: 10px; /* Reduz padding do header */
+  }
+
+  .top-bar a {
+    font-size: 0.9rem; /* Reduz ainda mais o tamanho do texto dos links */
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  border: none; /* Remover borda da div hero */
+  background-color: #436850;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  color: #FBFADA;
+  font-family: 'Merriweather', serif; /* Fonte para o título */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #FBFADA;
+  font-family: 'Roboto', sans-serif; /* Fonte para o parágrafo */
+}
+
+ .btn-primary {
+  background-color: #FBFADA;
+  color: #436850;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #ADBC9F;
+}
+
+.hero-image {
+  display: inline-block; /* Garantir comportamento de bloco inline */
+  border: none; /* Remover qualquer borda */
+  padding: 0; /* Remover preenchimento adicional */
+  margin: 0; /* Garantir que não haja margens */
+  background-color: transparent; /* Garantir fundo transparente */
+  box-shadow: none; /* Remover sombras */
+}
+
+.profile-img {
+  width: 100%; /* Ajustar a largura */
+  border-radius: 0; /* Certificar-se de que não há arredondamento adicional */
+  box-shadow: none; /* Remover qualquer sombra */
+  border: none; /* Remover borda */
+  background-color: transparent; /* Garantir fundo transparente */
+  display: block; /* Evitar comportamentos inline inesperados */
+}
+
+
+.teste {
+  width: 100%; /* Ocupa toda a largura da tela */
+  overflow: hidden; /* Impede que as imagens saiam da área visível */
+  position: relative;
+  display: flex; /* Flexbox para alinhar as imagens */
+  background-color: #2e7d32;
+}
+
+.konoha {
+  height: 50px; /* Defina a altura desejada */
+  margin-right: 20px; /* Espaço entre as imagens */
+  animation: moveInfinito 10s linear infinite; /* Animação para mover as imagens */
+}
+
+@keyframes moveInfinito {
+  0% {
+    transform: translateX(100%); /* Começa fora da tela à direita */
+  }
+  100% {
+    transform: translateX(-100%); /* Move até fora da tela à esquerda */
+  }
+}
+
+ 
+/* Estilo geral para as seções */
+.about, .services, footer, .vision, .mission {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #FBFADA;
+  margin: 0; /* Remove qualquer margem adicional */
+}
+
+.about-content, .vision-content, .mission-content, .services-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 0; /* Remove o espaçamento entre os blocos de conteúdo */
+}
+
+.about-image, .vision-image, .mission-image, .services-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: none; /* Garantir que não há borda */
+  box-shadow: none; /* Remover qualquer sombra */
+  outline: none; /* Remover qualquer contorno adicional */
+  background-color: transparent; /* Garantir fundo transparente */
+}
+
+/* Garantir que a imagem não tenha margens ou padding adicionais */
+.about-image-wrapper, .vision-image-wrapper, .mission-image-wrapper, .services-image-wrapper {
+  padding: 0; /* Remover qualquer preenchimento */
+  margin: 0; /* Remover qualquer margem */
+  display: inline-block; /* Garantir que a imagem fique no lugar sem espaçamento extra */
+}
+
+.about p, .vision p, .mission p, .services p {
+  max-width: 900px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .about-content, .vision-content, .mission-content, .services-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vision, .mission, .services {
+    width: 100%;
+  }
+
+  .vision p, .mission p, .services p {
+    max-width: 90%;
+  }
+
+  .vision-image, .mission-image, .services-image {
+    max-width: 450px;
+  }
+}
+
+
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f1f8e9;
+  border: 1px solid #c5e1a5;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif; /* Fonte personalizada para os links */
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-content, .hero-image {
+    max-width: 100%;
+  }
+
+  .service-cards .card {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: #ADBC9F;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif; /* Fonte personalizada para o rodapé */
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.partners {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #FBFADA;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaço entre as imagens */
+  margin-top: 20px;
+}
+
+.carousel-container img {
+  width: 100%;
+  max-width: 220px; /* Limita o tamanho das imagens */
+  height: auto;
+  border-radius: 15px; /* Borda arredondada para as imagens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para as imagens */
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-container img:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel-container {
+    justify-content: center; /* Centraliza as imagens em telas menores */
+  }
+
+  .carousel-container img {
+    max-width: 150px; /* Reduz o tamanho das imagens em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container img {
+    max-width: 120px; /* Ainda menor em telas muito pequenas */
+  }
+}
