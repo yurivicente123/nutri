@@ -103,7 +103,7 @@ const container = document.getElementById('images-container');
 // Crie 100 instâncias da classe 'konoha' e adicione ao contêiner
 for (let i = 0; i < 100; i++) {
   const img = document.createElement('img');  // Cria uma nova tag <img>
-  img.src = './images/folha.png';                    // Define o caminho da imagem
+  img.src = '/folha.png';                    // Define o caminho da imagem
   img.alt = 'folha';                          // Define o texto alternativo
   img.classList.add('konoha');                // Adiciona a classe 'konoha'
   container.appendChild(img);                 // Adiciona a imagem ao contêiner
